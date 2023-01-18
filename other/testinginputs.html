@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Testing Caesar Cipher Inputs</title>
+</head>
+<body>
+<h1>Caesar Cipher</h1>
+<form>
+    Enter your message: <input type="text" id="message"><br><br>
+    Enter your key (1 - 26): <input type="number" id="key"><br><br>
+</form>
+<button onclick="encrypt()" id="encrypt" type="submit">Encrypt</button>
+<p id="result"></p>
+<script>
+    var alphabet = ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z']
+
+    function encrypt() {
+        msg = document.getElementById("message").value;
+        key = parseInt(document.getElementById("key").value);
+
+        if (key < 1 || key > 26){
+            alert("Your key must be between 1 and 26 (A - Z).");
+        }
+        else {
+            document.getElementById("result").innerHTML = alphabet[3];
+        }
+    }
+</script>
+</body>
+</html>
